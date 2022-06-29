@@ -1,0 +1,67 @@
+body{
+    background-color: pink;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+div.container1{
+    background-color: red;
+}
+div.container2{
+    background-color: brown;
+
+}
+
+input {
+    border-radius: 5px;
+    border-style: groove;
+    border-color: black;
+}
+
+button{
+    border-radius: 15px;
+    transition-duration:0.4s;
+
+}
+#boton:hover{
+    background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+th{
+    background-color: rgb(216, 84, 23);
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+    border-style: groove;
+    border-color: black;
+    margin:auto;
+}
+
+h1,h2{
+    text-align: center;
+    width:500px;
+    margin: auto;
+    border: solid;
+    text-shadow: 2px 2px 5px red;
+}
+
+div.lista{
+    background-color: rgba(28, 106, 196, 0.884);
+    width: 650px;
+    border:10px solid rgba(170, 46, 160, 0.863);
+    padding: 50px;
+    margin:auto
+}
+
+p{
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+#articulo{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}

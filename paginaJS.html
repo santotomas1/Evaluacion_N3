@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="molde_N3.css"/> 
+    <title>Evaluacion_N3</title>
+</head>
+<body>
+    <div class="letras">
+        
+        <h1 id="titulo">¿Quienes somos?</h1>
+        <h2 id="subtitulo">Soprole</h2>
+        
+        <article id="articulo">
+            Somos una organización de vasta trayectoria, siendo hoy en día parte de Fonterra, empresa multinacional líder en el rubro Lácteo. 
+            Somos una de las marcas preferidas y más valoradas por los consumidores, estando dentro de las marcas más queridas por los chilenos.
+            <button id="boton" class="btn bnt-info" >Cambio</button>
+        </article>
+        
+    </div>
+    <div class="lista">
+        <p class="Transporte">ingrese datos</p>
+        <from id="Soprole">
+            <input id="software" type="text" placeholder="ingrese software" class="form-control my-2">
+            <input id="empresa" type="text" placeholder="ingrese empresa" class="form-control my-2">
+            <input id="usuario" type="text" placeholder="ingrese usuario" class="form-control my-2">
+            <button id="boton" type="reset" onclick="capturar();" class="btn bnt-success">agregar</button>
+        </from>
+        <div class="lista2">
+            <table class="tabla" id="aaa">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>software</th>
+                        <th>empresa</th>
+                        <th>usuario</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    
+    <script>
+        var h1=document.getElementById("titulo");
+        console.log(h1.innerHTML);
+        h1.style.color="blue";
+        h1.style.background="orange";
+        var h2=document.getElementById("subtitulo");
+        console.log(h2.innerHTML);
+        h2.style.color="red";
+        h2.style.background="blue";
+        var boton=document.getElementById("boton");
+        boton.onclick=function(){
+          h2.style.color="grey";
+          h2.style.background="black";
+          h1.style.color="orange"
+          h1.style.background="green"
+        }
+        function capturar(){
+            console.log("capturado")
+            function Empresa(software,empresa,usuario){
+                this.software=software;
+                this.empresa=empresa;
+                this.usuario=usuario;
+            }
+            var capturarsoftware=document.getElementById("software").value;
+            console.log(capturarsoftware);
+            var capturarempresa=document.getElementById("empresa").value;
+            console.log(capturarempresa);
+            var capturarusuario=document.getElementById("usuario").value;
+            console.log(capturarusuario);
+
+            sujeto=new Empresa(capturarsoftware,capturarempresa,capturarusuario);
+            agregar();
+        }
+
+        var basedatos=[];
+        function agregar(){
+            basedatos.push(sujeto)
+            console.log(basedatos);
+            document.getElementById("aaa").innerHTML += '<tbody><td>'+sujeto.software+'</td><td>'+sujeto.empresa+'</td><td>'+sujeto.usuario+'</td><td>'
+        };
+    </script>
+</body>
+</html>
